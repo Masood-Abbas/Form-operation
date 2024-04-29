@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
           actionCell.appendChild(deleteButton);
       }
   }
-
+        // update data
   function handleEditUser(event) {
       var index = parseInt(event.target.dataset.index);
       var usernames = JSON.parse(localStorage.getItem("usernames")) || [];
@@ -77,8 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("passwords", JSON.stringify(passwords));
 
           displayUserData();
-          redirectToLoginPage();
-          document.querySelector("h1").textContent = "User Management App"; // Reset heading text
+          redirectToLoginPage(); 
       });
 
       var nameLabel = document.createElement("label");
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       updateForm.appendChild(updateButton);
 
       document.getElementById("loginForm").replaceWith(updateForm); 
-      document.querySelector("h1").innerHTML = "Edit User"; 
+      document.querySelector("h1").innerHTML = "update form"; 
   }
     // delet the event
   function handleDeleteUser(event) {
